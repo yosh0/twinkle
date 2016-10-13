@@ -208,44 +208,6 @@
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="statCfLabel">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="whatsThis">
-                 <string>Call redirect indication.</string>
-                </property>
-                <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/images/cf.png</pixmap>
-                </property>
-                <property name="wordWrap">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="statDndLabel">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="whatsThis">
-                 <string>Do not disturb indication.</string>
-                </property>
-                <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/images/cancel.png</pixmap>
-                </property>
-                <property name="wordWrap">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
                <widget class="QLabel" name="statMWILabel">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1042,7 +1004,6 @@
    <addaction name="callInvite"/>
    <addaction name="callAnswer"/>
    <addaction name="callBye"/>
-   <addaction name="callReject"/>
    <addaction name="callRedirect"/>
    <addaction name="callTransfer"/>
    <addaction name="callHold"/>
@@ -1058,7 +1019,7 @@
      <x>0</x>
      <y>0</y>
      <width>733</width>
-     <height>17</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="fileMenu">
@@ -1090,7 +1051,6 @@
     <addaction name="callInvite"/>
     <addaction name="callAnswer"/>
     <addaction name="callBye"/>
-    <addaction name="callReject"/>
     <addaction name="callRedirect"/>
     <addaction name="callTransfer"/>
     <addaction name="callHold"/>
@@ -1122,8 +1082,6 @@
     <property name="title">
      <string>&amp;Services</string>
     </property>
-    <addaction name="serviceDnd"/>
-    <addaction name="serviceRedirection"/>
     <addaction name="serviceAutoAnswer"/>
     <addaction name="servicesVoice_mailAction"/>
    </widget>
@@ -1263,6 +1221,9 @@
    </property>
   </action>
   <action name="callReject">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/icons/images/reject.png</normaloff>:/icons/images/reject.png</iconset>

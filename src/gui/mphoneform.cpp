@@ -204,7 +204,7 @@ void MphoneForm::init()
         menu->addAction(callInvite);
         menu->addAction(callAnswer);
         menu->addAction(callBye);
-        menu->addAction(callReject);
+//        menu->addAction(callReject);
         menu->addAction(callRedirect);
         menu->addAction(callTransfer);
         menu->addAction(callHold);
@@ -226,8 +226,8 @@ void MphoneForm::init()
         menu->addSeparator();
 		
 		// Service menu
-        menu->addAction(serviceDnd);
-        menu->addAction(serviceRedirection);
+//        menu->addAction(serviceDnd);
+//        menu->addAction(serviceRedirection);
         menu->addAction(serviceAutoAnswer);
         menu->addAction(servicesVoice_mailAction);
 		
@@ -1224,24 +1224,24 @@ void MphoneForm::updateServicesStatus()
 	// Set service status
 	if (num_dnd == user_list.size()) {
 		// All users enabled dnd
-		statDndLabel->setPixmap(QPixmap(":/icons/images/cancel.png"));
+//		statDndLabel->setPixmap(QPixmap(":/icons/images/cancel.png"));
 	} else if (num_dnd > 0) {
 		// Some users enabled dnd
-		statDndLabel->setPixmap(QPixmap(":/icons/images/cancel.png"));
+//		statDndLabel->setPixmap(QPixmap(":/icons/images/cancel.png"));
 	} else {
 		// No users enabeld dnd
-		statDndLabel->setPixmap(QPixmap(":/icons/images/cancel-disabled.png"));
+//		statDndLabel->setPixmap(QPixmap(":/icons/images/cancel-disabled.png"));
 	}
 	
 	if (num_cf == user_list.size()) {
 		// All users enabled redirecton
-		statCfLabel->setPixmap(QPixmap(":/icons/images/cf.png"));
+//		statCfLabel->setPixmap(QPixmap(":/icons/images/cf.png"));
 	} else if (num_cf > 0) {
 		// Some users enabled redirection
-		statCfLabel->setPixmap(QPixmap(":/icons/images/cf.png"));
+//		statCfLabel->setPixmap(QPixmap(":/icons/images/cf.png"));
 	} else {
 		// No users enabled redirection
-		statCfLabel->setPixmap(QPixmap(":/icons/images/cf-disabled.png"));
+//		statCfLabel->setPixmap(QPixmap(":/icons/images/cf-disabled.png"));
 	}
 	
 	if (num_auto_answer == user_list.size()) {
@@ -1258,31 +1258,31 @@ void MphoneForm::updateServicesStatus()
 	}
 	
 	// Set tool tip with detailed info for multiple users.
-    statDndLabel->setToolTip(QString());
-    statCfLabel->setToolTip(QString());
+//    statDndLabel->setToolTip(QString());
+//    statCfLabel->setToolTip(QString());
     statAaLabel->setToolTip(QString());
 
 	QString clickToActivate("<i>");
 	clickToActivate += tr("Click to activate").replace(' ', "&nbsp;");
 	clickToActivate += "</i>";
 	if (num_dnd > 0) {
-        statDndLabel->setToolTip(tipDnd);
+//        statDndLabel->setToolTip(tipDnd);
 	} else {
 		QString status("<p>");
 		status += tr("Do not disturb is not active.").replace(' ', "&nbsp;");
 		status += "</p>";
 		status += clickToActivate;
-        statDndLabel->setToolTip(status);
+//       statDndLabel->setToolTip(status);
 	}		
 	
 	if (num_cf > 0) {
-        statCfLabel->setToolTip(tipCf);
+//        statCfLabel->setToolTip(tipCf);
 	} else {
 		QString status("<p>");
 		status += tr("Redirection is not active.").replace(' ', "&nbsp;");
 		status += "</p>";
 		status += clickToActivate;
-        statCfLabel->setToolTip(status);
+//        statCfLabel->setToolTip(status);
 	}
 	
 	if (num_auto_answer > 0) {
@@ -2808,6 +2808,7 @@ void MphoneForm::processLeftMouseButtonRelease(QMouseEvent *e)
 		} else {
 			srvAutoAnswer();
 		}
+/*
     } else if (statDndLabel->testAttribute(Qt::WA_UnderMouse)) {
 		if (phone->ref_users().size() == 1) {
             bool enable = !serviceDnd->isChecked();
@@ -2816,8 +2817,11 @@ void MphoneForm::processLeftMouseButtonRelease(QMouseEvent *e)
 		} else {
 			srvDnd();
 		}
+*/
+/*
     } else if (statCfLabel->testAttribute(Qt::WA_UnderMouse)) {
 		srvRedirect();
+*/
     } else if (statMWILabel->testAttribute(Qt::WA_UnderMouse)) {
 		popupMenuVoiceMail(e->globalPos());
     } else if (statMissedLabel->testAttribute(Qt::WA_UnderMouse)) {

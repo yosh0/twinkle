@@ -19,14 +19,14 @@
   <layout class="QGridLayout">
    <item row="0" column="0">
     <widget class="QTableView" name="historyListView">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
      <property name="selectionMode">
       <enum>QAbstractItemView::SingleSelection</enum>
      </property>
      <property name="selectionBehavior">
       <enum>QAbstractItemView::SelectRows</enum>
-     </property>
-     <property name="editTriggers">
-      <enum>QAbstractItemView::NoEditTriggers</enum>
      </property>
      <property name="sortingEnabled">
       <bool>true</bool>
@@ -143,6 +143,9 @@
     <layout class="QHBoxLayout">
      <item>
       <widget class="QPushButton" name="clearPushButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="whatsThis">
         <string>&lt;p&gt;Clear the complete call history.&lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; this will clear &lt;b&gt;all&lt;/b&gt; records, also records not shown depending on the checked view options.&lt;/p&gt;</string>

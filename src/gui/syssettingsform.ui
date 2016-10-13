@@ -371,6 +371,16 @@ If before answering a call, the microphone or speaker appears to be invalid, a w
                 <string>1024</string>
                </property>
               </item>
+              <item>
+               <property name="text">
+                <string>2048</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4096</string>
+               </property>
+              </item>
              </widget>
             </item>
             <item row="1" column="0">
@@ -439,6 +449,16 @@ If before answering a call, the microphone or speaker appears to be invalid, a w
                 <string>1024</string>
                </property>
               </item>
+              <item>
+               <property name="text">
+                <string>2048</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4096</string>
+               </property>
+              </item>
              </widget>
             </item>
             <item row="2" column="1">
@@ -479,6 +499,16 @@ If before answering a call, the microphone or speaker appears to be invalid, a w
               <item>
                <property name="text">
                 <string>1024</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>2048</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4096</string>
                </property>
               </item>
              </widget>
